@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aor.numbers.PositiveFilterTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-03-28T09:35:40" hostname="claudia" time="0.004">
+  <properties/>
+  <testcase name="PositiveTest1" classname="com.aor.numbers.PositiveFilterTest" time="0.0"/>
+  <testcase name="PositiveTest2" classname="com.aor.numbers.PositiveFilterTest" time="0.0"/>
+  <testcase name="PositiveTest3" classname="com.aor.numbers.PositiveFilterTest" time="0.001"/>
+  <testcase name="PositiveTest4" classname="com.aor.numbers.PositiveFilterTest" time="0.0"/>
+  <testcase name="PositiveTest5" classname="com.aor.numbers.PositiveFilterTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
