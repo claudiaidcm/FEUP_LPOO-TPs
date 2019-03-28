@@ -1,4 +1,12 @@
-package PACKAGE_NAME;
+public class Line implements Shape{
+    Integer length;
 
-public class Line {
+    public Line(Integer length) {
+        this.length = length;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("LINE");
+    }
 }

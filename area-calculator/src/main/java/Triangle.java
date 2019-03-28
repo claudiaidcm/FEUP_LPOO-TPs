@@ -1,4 +1,26 @@
-package PACKAGE_NAME;
+public class Triangle implements AreaShape {
+    Integer base;
+    Integer height;
 
-public class Triangle {
+    public Triangle(Integer base, Integer height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    public Integer getBase() {
+        return base;
+    }
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    public double getArea() {
+        return (getHeight() * getBase())/2;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("TRIANGLE");
+    }
 }

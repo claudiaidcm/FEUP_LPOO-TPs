@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
+public interface AreaShape extends Shape, HasArea {
 
-public interface AreaShape {
 }

@@ -1,4 +1,17 @@
-package PACKAGE_NAME;
+public class House implements HasArea {
 
-public class House {
+    private double area;
+
+    public House(double area) {
+        this.area = area;
+    }
+
+    @Override
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
 }
