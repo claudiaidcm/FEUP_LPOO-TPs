@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/refactoring.iml" filepath="$PROJECT_DIR$/refactoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/refactoring.main.iml" filepath="$PROJECT_DIR$/.idea/modules/refactoring.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/refactoring.test.iml" filepath="$PROJECT_DIR$/.idea/modules/refactoring.test.iml" />
+    </modules>
+  </component>
+</project>
