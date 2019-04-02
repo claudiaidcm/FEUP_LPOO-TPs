@@ -1,5 +1,12 @@
 package com.aor.refactoring.example3;
 
+/* CODE SMELLS:
+    -> SWITCH: (REFACTORING) replace type code with subclasses;
+
+   REFACTORING:
+    -> Introduce null object;
+ */
+
 public class SimpleOrder {
     private Discount discount;
     private double price;
@@ -13,9 +20,17 @@ public class SimpleOrder {
     }
 
     public double getTotal() {
+
+     class NullDiscount implements Discount {
+         @Override
+         public double applyDiscount(double price) {
+             return price;
+         }
+     }
+
         if (discount == null)
-            return price;
-        else
-            return discount.applyDiscount(price);
+            discount = new NullDiscount();
+
+        return discount.applyDiscount(price);
     }
 }

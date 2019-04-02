@@ -9,14 +9,14 @@ public class SimpleOrderTest {
     @Test
     public void testFixedDiscount() {
         SimpleOrder order = new SimpleOrder(100);
-        order.setDiscount(new Discount(10));
+        order.setDiscount(new FixedDiscount(10));
         assertEquals(90, order.getTotal(), 0.1);
     }
 
     @Test
     public void testPercentageDiscount() {
         SimpleOrder order = new SimpleOrder(100);
-        order.setDiscount(new Discount(0.2));
+        order.setDiscount(new PercentageDiscount(0.2));
         assertEquals(80, order.getTotal(), 0.1);
     }
 

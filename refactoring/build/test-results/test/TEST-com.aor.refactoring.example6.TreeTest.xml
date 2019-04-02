@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aor.refactoring.example6.TreeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-04-02T11:45:20" hostname="claudia" time="0.068">
+  <properties/>
+  <testcase name="testTreeSetLocation" classname="com.aor.refactoring.example6.TreeTest" time="0.057"/>
+  <testcase name="testToString" classname="com.aor.refactoring.example6.TreeTest" time="0.006"/>
+  <testcase name="testAddAppraisal" classname="com.aor.refactoring.example6.TreeTest" time="0.0"/>
+  <testcase name="testNextAppraisalNotOverdue" classname="com.aor.refactoring.example6.TreeTest" time="0.001"/>
+  <testcase name="testTreeCreation" classname="com.aor.refactoring.example6.TreeTest" time="0.001"/>
+  <testcase name="testNextAppraisalOverdue" classname="com.aor.refactoring.example6.TreeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
