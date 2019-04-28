@@ -8,11 +8,11 @@ public class TurtleTest {
 
     @Test
     public void testRotateLeft() {
-        Turtle turtle = new Turtle(5, 5, 'N');
-        turtle.execute('L'); assertEquals('W', turtle.getDirection());
-        turtle.execute('L'); assertEquals('S', turtle.getDirection());
-        turtle.execute('L'); assertEquals('E', turtle.getDirection());
-        turtle.execute('L'); assertEquals('N', turtle.getDirection());
+        Turtle turtle = new Turtle(5, 5, Turtle.DIRECTION.N);
+        turtle.execute(Turtle.COMMAND.L); assertEquals('W', turtle.getDirection());
+        turtle.execute(Turtle.COMMAND.L); assertEquals('S', turtle.getDirection());
+        turtle.execute(Turtle.COMMAND.L); assertEquals('E', turtle.getDirection());
+        turtle.execute(Turtle.COMMAND.L); assertEquals('N', turtle.getDirection());
         assertEquals(5, turtle.getRow());
         assertEquals(5, turtle.getColumn());
     }

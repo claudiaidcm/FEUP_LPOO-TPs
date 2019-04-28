@@ -5,6 +5,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/* CASE SMELLS:
+    -> Data clumps: (REFACTORING) extract class - introduce parameter object/preserve whole object;
+    -> Long method: (REFACTORING) extract method;
+*/
+
 public class Tree {
     private Date plantedAt;
     private Location location;

@@ -1,15 +1,19 @@
 package com.aor.refactoring.example5;
 
 /* CODE SMELLS:
-    -> SWITCH STATEMENTS
- */
+    -> LONG METHOD: (REFACTORING) extract method;
+    -> PRIMITIVE OBSESSION: (REFACTORING) replace data type with object;
+*/
 
 public class Turtle {
+    enum COMMAND {L, R, F}
+    enum DIRECTION {N, W, S, E}
+
     private int row;
     private int column;
-    private char direction;
+    private DIRECTION direction;
 
-    public Turtle(int row, int column, char direction) {
+    public Turtle(int row, int column, DIRECTION direction) {
         this.row = row;
         this.column = column;
         this.direction = direction;
@@ -23,37 +27,72 @@ public class Turtle {
         return column;
     }
 
-    public char getDirection() {
+    public DIRECTION getDirection() {
         return direction;
     }
 
     public void rotateLeft() {
-        if (direction == 'N') direction = 'W';
-        else if (direction == 'W') direction = 'S';
-        else if (direction == 'S') direction = 'E';
-        else if (direction == 'E') direction = 'N';
+        switch (direction) {
+            case N:
+                direction = DIRECTION.W;
+                break;
+            case W:
+                direction = DIRECTION.S;
+                break;
+            case S:
+                direction = DIRECTION.E;
+                break;
+            case E:
+                direction = DIRECTION.N;
+                break;
+        }
     }
 
     public void rotateRight() {
-        if (direction == 'N') direction = 'E';
-        else if (direction == 'E') direction = 'S';
-        else if (direction == 'S') direction = 'W';
-        else if (direction == 'W') direction = 'N';
+        switch (direction) {
+            case N:
+                direction = DIRECTION.E;
+                break;
+            case W:
+                direction = DIRECTION.N;
+                break;
+            case S:
+                direction = DIRECTION.W;
+                break;
+            case E:
+                direction = DIRECTION.S;
+                break;
+        }
     }
 
     public void moveForward () {
-        if (direction == 'N') row--;
-        if (direction == 'S') row++;
-        if (direction == 'W') column--;
-        if (direction == 'E') column++;
+        switch (direction) {
+            case N:
+                row--;
+                break;
+            case W:
+                row++;
+                break;
+            case S:
+                column--;
+                break;
+            case E:
+                column++;
+                break;
+        }
     }
 
-    public void execute(char command) {
-        if (command == 'L')
-            rotateLeft();
-        else if (command == 'R')
-            rotateRight();
-        else if (command == 'F')
-            moveForward();
+    public void execute(COMMAND command) {
+        switch (command) {
+            case L:
+                rotateLeft();
+                break;
+            case R:
+                rotateRight();
+                break;
+            case F:
+                moveForward();
+                break;
+        }
     }
 }
